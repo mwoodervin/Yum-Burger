@@ -1,21 +1,21 @@
 // Import the ORM to create functions that will interact with the database.
-const dbManager = require("../config/catsDbManager");
+const dbManager = require("../config/burgerDbManager");
 
-var cat = {
+var burger = {
   all: function() {
-    return dbManager.all("cats");
+    return dbManager.all("burgers");
   },
   // The variables cols and vals are arrays.
   create: function(cols, vals) {
-    return dbManager.create("cats", cols, vals);
+    return dbManager.create("burgers", cols, vals);
   },
   update: function(objColVals, condition) {
-    return dbManager.update("cats", objColVals, condition);
+    return dbManager.update("burgers", objColVals, condition);
   },
   delete: function(condition) {
-    return dbManager.delete("cats", condition);
+    return dbManager.delete("burgers", condition);
   }
 };
 
-// Export the database functions for the controller (catsController.js).
-module.exports = cat;
+// Export the database functions for the controller (burger_Controller.js).
+module.exports = burger;

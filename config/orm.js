@@ -1,4 +1,5 @@
 // Import MySQL connection.
+const mysql = require("mysql");
 class ORM {
     connection;
   
@@ -96,6 +97,6 @@ class ORM {
   
   }
   
-  // Export the orm object for the model (cat.js).
+  // Export the orm object for the model (burger.js).
   module.exports = ORM;
   
