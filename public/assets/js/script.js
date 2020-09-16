@@ -5,7 +5,7 @@ $(function() {
       var newEaten = $(this).data("neweaten");
   
       var newEatenState = {
-        devoured: newEaten
+        devoured: 1
       };
   
       // Send the PUT request.
@@ -14,7 +14,7 @@ $(function() {
         data: newEatenState
       }).then(
         function() {
-          // console.log("changed devoured to", newEaten);
+          console.log("changed devoured to", newEaten);
           // Reload the page to get the updated list
           // })
           location.reload();
