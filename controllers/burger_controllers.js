@@ -1,18 +1,20 @@
 const express = require("express");
+// const ORM = require("config/orm.js");
+// const connection = require("./config/connection");
 const router = express.Router();
 // Import the model (burger.js) to use its database functions.
-const burger = require("../models/burger.js");
+const burgers = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", async function(req, res) {
-  const hbsObject = { burgers: await burger.all() };
+  const hbsObject = { burgers: await burgers.all() };
   console.log(hbsObject);
   res.render("index", hbsObject);
 });
 
 router.post("/api/burgers", async function(req, res) {
   try {
-    const result = await burger.create(
+    const result = await burgers.create(
       [
         "burger_name", "devoured"
       ],
@@ -22,6 +24,8 @@ router.post("/api/burgers", async function(req, res) {
     );
     // Send back the ID of the new burger
     res.json({ id: result.insertId });;
+    // am I getting anything from the database???
+    console.log(req.body.burger_name);
   }
   catch (err) {
     console.error(err);
@@ -35,7 +39,7 @@ router.put("/api/burgers/:id", async function(req, res) {
   console.log("condition", condition);
 
   try {
-    const result = await burger.update({ devoured: req.body.devoured }, condition);
+    const result = await burgers.update({ devoured: req.body.devoured }, condition);
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
@@ -53,7 +57,7 @@ router.delete("/api/burgers/:id", async function(req, res) {
   const condition = "id = " + req.params.id;
 
   try {
-    const result = await burger.delete(condition)
+    const result = await burgers.delete(condition)
     if (result.affectedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
