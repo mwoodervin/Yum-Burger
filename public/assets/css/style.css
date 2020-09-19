@@ -44,6 +44,12 @@ h2 {
     color: rgb(94, 19, 69);
 
   }
+
+  img.card-image-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
   div.add-burger {
     background-color: rgb(81, 81, 221);
     color: white;
