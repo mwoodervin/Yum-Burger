@@ -1,33 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander&family=Ranchers&display=swap');
 body {
-  background-image: url("assets/img/stockvault-fast-food-food-processors-concept221164.jpg");
-  /* background-repeat: no-repeat, repeat; */
-  background-color: #cccccc;
-  /* background-size: cover; */
+  background-image: url("/assets/img/1584.jpg");
+  background-size: cover;
 }
 
 h1 {
+  font-family: 'Ranchers', cursive;
   font-style: oblique;
   font-size: 50px;
   color: rgb(109, 47, 47);
   text-align: center;
 }
 
+h4 {
+  font-family: 'Ranchers', cursive;
+  font-size: 40px;
+  color: rgb(109, 47, 47);
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Grandstander', cursive;
+}
+
 li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
+    /* background: #faebd7; */
   }
   
   .label {
     font-weight: bold;
   }
   
-  .create-update-form {
+  div.burger-menu {
+    border: 5px;
+    text-align: center;
+  }
+  div.add-burger {
+    background-color: blue;
+    color: white;
+    text-align: center;
+  }
+
+  .create-form {
     padding: 5px;
     margin: 5px;
-    background: aqua;
+    /* background: aqua; */
   }
   
   .form-group {
     margin-bottom: 5px;
   }
+
+.footer {
+  text-align: center;
+}  
+
+.footer-text {
+  color: rgb(73, 67, 67);
+}
