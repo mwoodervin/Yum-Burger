@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grandstander&family=Ranchers&display=swap');
 body {
-  background-image: url("/assets/img/1584.jpg");
+  /* background-image: url("/assets/img/Food-background-l.jpg"); */
   background-size: cover;
+  background-color: rgb(155, 155, 155);
 }
 
 h1 {
-  font-family: 'Ranchers', cursive;
+  font-family: 'Grandstander', cursive;
   font-style: oblique;
   font-size: 50px;
-  color: rgb(109, 47, 47);
+  font-weight: bold;
+  color: rgb(94, 19, 69);
   text-align: center;
 }
 
 h4 {
-  font-family: 'Ranchers', cursive;
+  font-family: 'Grandstander', cursive;
   font-size: 40px;
-  color: rgb(109, 47, 47);
+  font-weight: bold;
+  color: rgb(94, 19, 69);
   text-align: center;
 }
 
@@ -24,9 +27,10 @@ h2 {
   font-family: 'Grandstander', cursive;
 }
 
-li {
+.li {
     padding: 5px;
     margin: 5px;
+    text-align: left;
     /* background: #faebd7; */
   }
   
@@ -37,9 +41,11 @@ li {
   div.burger-menu {
     border: 5px;
     text-align: center;
+    color: rgb(94, 19, 69);
+
   }
   div.add-burger {
-    background-color: blue;
+    background-color: rgb(81, 81, 221);
     color: white;
     text-align: center;
   }
