@@ -9,6 +9,17 @@ let connection = mysql.createConnection({
     database: "Yum_Burgers"
 });
 
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL)
+} else {
+    connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        password: 'root12345',
+        database: 'Yum_Burger'
+    });
+}
+
 connection.connect(function (err) {
     if (err) throw err;
     console.log("connected as id " + connection.threadId);
