@@ -1,51 +1,44 @@
+<header class="header-box">
 <h1>Yum-Burger</h1>
 <h4>What are <i>Your</i> Burger Plans?</h4>
-
-<br>
-<br>
+</header>
 
 <div class="container burger-menu">
-  <div class="row">
-    {{!-- Card for uneaten burgers --}}
-    <div class="col-sm-6">
-      <div class="card">
-        <img src="/assets/img/burger-5538285_640.png" class="card-img-top" alt="Burger">
-        <div class="card-body">
-          {{!-- <p class="card-text">Burgers I Plan to Eat</p> --}}
-          <h2 class="card-text">Burgers I Plan to Eat</h2>
-          <ul class="list-group list-group-flush">
-            {{#each burgers}}
-            {{#unless devoured}}
-            {{> burger-block devoured=false}}
-            {{/unless}}
-            {{/each}}
-          </ul>
-        </div>
-      </div>
-    </div>
-    {{!-- Card for eaten burgers --}}
-    <div class="col-sm-6">
-      <div class="card">
-        <img src="/assets/img/burger-5538285_640.png" class="card-img-top" alt="Burger">
-        <div class="card-body">
-          {{!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
-          <h2 class="card-text">Burgers I Have Eaten</h2>
-          <ul class="list-group list-group-flush">
-            {{#each burgers}}
-            {{#if devoured}}
-            {{> burger-block devoured=true}}
-            {{/if}}
-            {{/each}}
-          </ul>
-        </div>
-      </div>
+  <div class="card burgers-fresh">
+    <img src="/assets/img/burger-5538285_640.png" class="card-img-top" alt="Burger">
+    <div class="card-body">
+      <h2 class="card-text">Burgers I Plan to Eat</h2>
+      <ul class="list-group list-group-flush">
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> burger-block devoured=false}}
+        {{/unless}}
+        {{/each}}
+      </ul>
     </div>
   </div>
+  {{!-- Card for eaten burgers --}}
+  {{!-- <div class="col-sm-6"> --}}
+  <div class="card burgers-eaten">
+    <img src="/assets/img/burger-5538285_640.png" class="card-img-top" alt="Burger">
+    <div class="card-body">
+      <h2 class="card-text">Burgers I Have Eaten</h2>
+      <ul class="list-group list-group-flush">
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> burger-block devoured=true}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  {{!-- </div> --}}
+  {{!-- </div> --}}
 </div>
 
 <br>
 {{!-- container for adding a burger --}}
-<div class="container">
+<div class="container add">
   <div class="row">
     <div class="col-4"></div>
     <div class="add-burger col-4">
@@ -62,12 +55,11 @@
   </div>
 </div>
 
-</div>
 
-<footer class="footer mt-auto py-3">
-  <div class="container-fluid">
+<footer class="footer-box">
+  {{!-- <div class="container-fluid"> --}}
     <span class="footer-text">Mary W. Ervin | Burgerfest | September 2020
     </span>
     <br>
-  </div>
+  {{!-- </div> --}}
 </footer>

@@ -1,9 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grandstander&family=Ranchers&display=swap');
 body {
-  /* background-image: url("/assets/img/Food-background-l.jpg"); */
   background-size: cover;
   background-color: rgb(155, 155, 155);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header.header-box {
+  margin:10px
+}
+div.burger-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  order: 2;
+}
+
+div.add {
+  margin-bottom: 20px;
+  order: 1;
+}
+
+div.burgers-fresh {
+  order: 2;
+}
+
+div.burgers-eaten {
+  order: 3;
 }
 
 h1 {
@@ -30,8 +55,6 @@ h2 {
 .li {
     padding: 5px;
     margin: 5px;
-    text-align: left;
-    /* background: #faebd7; */
   }
   
   .label {
@@ -40,14 +63,13 @@ h2 {
   
   div.burger-menu {
     border: 5px;
-    text-align: center;
     color: rgb(94, 19, 69);
-
   }
 
-  img.card-image-top {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  img.card-img-top {
+    justify-content: center;
+    height: 150px;
+    width: 150px;
   }
   
   div.add-burger {
@@ -66,7 +88,8 @@ h2 {
     margin-bottom: 5px;
   }
 
-.footer {
+footer.footer-box {
+  order: 4;
   text-align: center;
 }  
 
