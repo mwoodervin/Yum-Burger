@@ -1,5 +1,7 @@
 // Import MySQL connection.
 const mysql = require("mysql");
+const connection = require("./connection.js");
+
 class ORM {
     connection;
   
